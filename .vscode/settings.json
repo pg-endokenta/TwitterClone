@@ -3,6 +3,7 @@
         "asgi",
         "grsa",
         "rbonvo",
+        "signup",
         "usrxt"
     ]
 }
