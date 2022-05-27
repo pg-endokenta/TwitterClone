@@ -11,7 +11,6 @@ github上のdefaultブランチをsignup→mainに変更
 ログインページ→未作成
 サインインページ→作成済み
 
-【参考になる人】 https://github.com/amoon46/TwitterClone 
-【その他サンプル1】 https://github.com/shinonome-inc/backend-final-assignment-HasegawaKota 
-【その他サンプル2】 https://github.com/macaronu/Twitter_clone 
-【完了済みサンプル1】https://github.com/TAK848/pg-backend-final-tatter 
+2022/05/27
+これだと動かない<a href="{% url 'signup' %}">新規登録はこちら</a>
+これだと動く<a href="{% url 'user:signup' %}">新規登録はこちら</a>
