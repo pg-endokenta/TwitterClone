@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #↓userフォルダ内のapps.pyのUserConfigというclass
+    'user.apps.UserConfig',
+    #↓twitterフォルダ内のapps.pyのTwitterConfigというclass
+    'twitter.apps.TwitterConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -103,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
@@ -121,3 +125,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'static/']
+
+#未ログインユーザーをログインページに飛ばす
+LOGIN_URL = '/login/'
+#ログイン後に飛ばされるページ、　ログインページからの相対パス
+LOGIN_REDIRECT_URL = '../'
