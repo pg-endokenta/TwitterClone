@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>TwitterClone</title>
+</head>
+<body>
+{% block dev_user_auth %}
+<hr>
+<p>開発用</p>
+<h1>ログインユーザー名【{{user}}】</h1>
+<p> 未ログイン時はAnonymousUserと表示される</p>
+<hr>
+{% endblock dev_user_auth %}
+    
+{% block content %}
+{% endblock content %}  
+</body>
+</html>

@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="jp">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'twitter/base.html' %}
+
 {% block content %}
-    サインイン用のページです。
+    <h1>ここはサインイン用ページです。</h1>
     <form action="" method="POST">
-    {% csrf_token %}
+        {% csrf_token %}
         {{form.as_p}}
         <input type="submit" value="新規作成">
     </form>
-
-    {% endblock content %}
-    
-</body>
-</html>
+{% endblock content %}
