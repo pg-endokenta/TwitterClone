@@ -135,4 +135,4 @@ LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '../'
 
 #ユーザー認証に使うテーブルを指定
-AUTH_USER_MODEL = 'user.tc_user'
+AUTH_USER_MODEL = 'user.TC_user'

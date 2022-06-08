@@ -4,10 +4,10 @@ from django.conf import settings
 
 # Create your models here.
 
-class tc_user(AbstractUser):
+class TC_user(AbstractUser):
     class Meta:
         #Userモデルのテーブル名を指定
-        db_table = 'tc_user'
+        db_table = 'TC_user'
 
 
 """

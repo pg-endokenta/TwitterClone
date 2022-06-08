@@ -5,7 +5,7 @@ from django.views.generic import CreateView
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.contrib.auth import login, logout, authenticate
-from .models import tc_user
+from .models import TC_user
 from .forms import TC_UserCreationForm
 
 class SignUpView(CreateView):
@@ -22,7 +22,7 @@ class SignUpView(CreateView):
 
 class LoginView(LoginView):
     template_name = "user/login.html"
-    model = tc_user
+    model = TC_user
 
 def LogoutView(request):
     logout(request)

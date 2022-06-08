@@ -3,8 +3,10 @@
 【その他サンプル2】 https://github.com/macaronu/Twitter_clone 
 【完了済みサンプル1】https://github.com/TAK848/pg-backend-final-tatter 
 
+ 【自分のギット】
+
   参考になるサイト
   https://office54.net/python/django/model-custom-user
 
   進捗報告用word
-  https://tusedu-my.sharepoint.com/:w:/g/personal/8619288_ed_tus_ac_jp/EUtNuwQu4tJNueFEN6qNmeEBqJsJJ2OjZ7jdFOt2gFCoOQ?e=BvyIXj
+  https://tusedu-my.sharepoint.com/:w:/g/personal/8619288_ed_tus_ac_jp/EUtNuwQu4tJNueFEN6qNmeEBqJsJJ2OjZ7jdFOt2gFCoOQ?e=BvyIXjgit
