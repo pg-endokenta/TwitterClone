@@ -133,3 +133,6 @@ STATICFILES_DIRS = [BASE_DIR / 'static/']
 LOGIN_URL = '/login/'
 #ログイン後に飛ばされるページ、　ログインページからの相対パス
 LOGIN_REDIRECT_URL = '../'
+
+#ユーザー認証に使うテーブルを指定
+AUTH_USER_MODEL = 'user.tc_user'
