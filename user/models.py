@@ -10,12 +10,10 @@ class TC_user(AbstractUser):
         db_table = 'TC_user'
 
 
-"""
-class TC_profile(models.Model)
-    SelfIntroduction = models.CharField(verbose_name="自己紹介",max_length=200)
-    hobby = models.CharField(verbose_name="趣味",max_length=100)
-    user    = models.ForeignKey(settings.AUTH_USER_MODEL,verbose_name="ユーザー",on_delete=models.CASCADE, null=True,blank=True)
+class TC_profile(models.Model):
+    SelfIntroduction = models.CharField(verbose_name="自己紹介",max_length=200, blank=True)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
 
     def __str__(self):
-        return self.user
-"""
+        return str(self.user)
