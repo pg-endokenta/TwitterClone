@@ -29,3 +29,6 @@ TwitterCloneのどのタイミングでデフォルトのUserが不都合にな�
 【注意事項】
 ・UserはAbstractUserを継承してください。
 というものを発見した。
+
+ 2022/06/08
+ データベース関連をいじってマイグレイとするときのエラーはsettings.pyのadminのappとurlsのadminをコメントアウトすると出ない
