@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     #↓twitterフォルダ内のapps.pyのTwitterConfigというclass
     'twitter.apps.TwitterConfig',
+    #↓tweetフォルダ内のapps.pyのTweetConfigというclass
+    'tweet.apps.TweetConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

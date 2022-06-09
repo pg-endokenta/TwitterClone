@@ -1,0 +1,15 @@
+{% extends 'twitter/base.html' %}
+
+{% block content %}
+    <h1>tweet一覧画面です</h1>
+    
+    {% for TC_tweet in tweets %}
+    <hr>
+    【投稿者】{{TC_tweet.author}}
+    【ツイート日時】{{TC_tweet.date_posted}}
+    <br>
+    【ツイート内容】{{TC_tweet.content}}
+    {% endfor %}
+        
+    
+{% endblock content %}

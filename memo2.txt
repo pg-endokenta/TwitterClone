@@ -3,7 +3,7 @@
 【その他サンプル2】 https://github.com/macaronu/Twitter_clone 
 【完了済みサンプル1】https://github.com/TAK848/pg-backend-final-tatter 
 
- 【自分のギット】
+ 【自分のギット】https://github.com/pg-endokenta
 
   参考になるサイト
   https://office54.net/python/django/model-custom-user

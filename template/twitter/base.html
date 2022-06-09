@@ -7,12 +7,19 @@
 <body>
 {% block dev_user_auth %}
 <hr>
-<p>開発用</p>
-<h1>ログインユーザー名【{{user}}】</h1>
-<p> 未ログイン時はAnonymousUserと表示される</p>
+<p>---------------開発用-------------------</p>
+<p>ログインユーザー名【{{user}}】※未ログイン時はAnonymousUserと表示される</p>
+
+<ul>
+<li><a href="{% url 'user:signup' %}">新規作成はこちら</a></li>
+<li><a href="{% url 'user:login' %}">ログインはこちら</a></li>
+<li><a href="{% url 'user:logout' %}">ログアウトはこちら</a></li>
+<li><a href="{% url 'tweet:tweet' %}">ツイート一覧はこちら</a></li>
+<li><a href="{% url 'tweet:tweet-create' %}">ツイート作成はこちら</a></li>
+</ul>
+<p>---------------開発用-------------------</p>
 <hr>
 {% endblock dev_user_auth %}
-    
 {% block content %}
 {% endblock content %}  
 </body>
