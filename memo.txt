@@ -32,3 +32,7 @@ TwitterCloneのどのタイミングでデフォルトのUserが不都合にな�
 
  2022/06/08
  データベース関連をいじってマイグレイとするときのエラーはsettings.pyのadminのappとurlsのadminをコメントアウトすると出ない
+
+ 2022/06/09
+  {% for TC_tweet in tweets %}
+  の左側はクラスの名前、右側はviews.pyのcontext_object_nameで決めた名前

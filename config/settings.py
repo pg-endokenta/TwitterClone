@@ -138,3 +138,7 @@ LOGIN_REDIRECT_URL = '../'
 
 #ユーザー認証に使うテーブルを指定
 AUTH_USER_MODEL = 'user.TC_user'
+
+#css,img,js等のファイル置き場指定
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR /'static']
