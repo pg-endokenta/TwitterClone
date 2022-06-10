@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import ListView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+
+from user.models import TC_profile
 from .models import TC_tweet
 
 # Create your views here.
@@ -21,6 +23,6 @@ class TC_tweetCreateView(LoginRequiredMixin, CreateView):
 
     #form_valid関数は、データがポストされた時に呼ばれるメソッド
     def form_valid(self, form):
-        #投稿者が誰かを教える。
+        #投稿者の情報を書き込む。
         form.instance.author_id = self.request.user.id
         return super().form_valid(form)
