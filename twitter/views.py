@@ -15,7 +15,10 @@ class HomeView(LoginRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         user = self.request.user
         context["username"] = user
-        pk = request.user.pk
-        my_profile = TC_profile.objects.get(pk=pk)
-        context["self_introduction"] = my_profile.SelfIntroduction
+        context["self_introduction"] = user.tc_profile.SelfIntroduction
+        context["profile_id"] = user.tc_profile.pk
+
+        #pk = request.user.pk
+        #my_profile = TC_profile.objects.get(pk=pk)
+        #context["self_introduction"] = my_profile.SelfIntroduction
         return context

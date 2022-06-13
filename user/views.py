@@ -34,4 +34,5 @@ def LogoutView(request):
 
 class ProfileDetailView(DetailView):
     model = TC_profile
+    context_object_name = "profile"
     template_name = "user/profile.html"
