@@ -1,0 +1,11 @@
+{% extends 'twitter/base.html' %}
+
+
+    
+{% block content %}
+<h1>tweet削除画面です</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="削除します">
+</form>
+{% endblock content %}

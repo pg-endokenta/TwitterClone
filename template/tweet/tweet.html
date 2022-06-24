@@ -5,10 +5,12 @@
     
     {% for TC_tweet in tweets %}
     <hr>
-    【投稿者】{{TC_tweet.author}}
+    <a href="{% url 'user:profile' TC_tweet.author.tc_profile.pk %}" class="btn btn-primary">【投稿者】{{TC_tweet.author}}</a>
+    
     【ツイート日時】{{TC_tweet.date_posted}}
     <br>
     【ツイート内容】{{TC_tweet.content}}
+    <a href="{% url 'tweet:detail' TC_tweet.pk %}" class="btn btn-primary">ボタン</a>
     {% endfor %}
         
     

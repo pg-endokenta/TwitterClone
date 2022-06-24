@@ -2,7 +2,7 @@
 #from django.contrib.auth.forms import UserCreationForm
 from urllib import request, response
 from django.shortcuts import redirect
-from django.views.generic import CreateView, DetailView
+from django.views.generic import CreateView, DetailView, UpdateView
 from django.contrib.auth.views import LoginView
 from django.urls import reverse_lazy
 from django.contrib.auth import login, logout, authenticate
@@ -36,3 +36,16 @@ class ProfileDetailView(DetailView):
     model = TC_profile
     context_object_name = "profile"
     template_name = "user/profile.html"
+
+class ProfileUpdateView(UpdateView):
+    template_name = 'user/profile_update.html'
+    model = TC_profile
+    fields = ('SelfIntroduction',)
+    success_url = reverse_lazy('twitter:home')
+
+    def form_valid(self, form):
+        #まだデータベースに書き込まない
+        profile = form.save(commit=False)
+        #ここで書き込む
+        profile.save()
+        return super().form_valid(form)
