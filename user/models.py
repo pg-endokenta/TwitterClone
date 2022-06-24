@@ -17,3 +17,11 @@ class TC_profile(models.Model):
 
     def __str__(self):
         return str(self.user)
+
+
+class Follow(models.Model):
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='follow_owner')
+    followed = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return 'follow for "' + str(self.followed) + '" （by' + str(self.owner) + '）'
