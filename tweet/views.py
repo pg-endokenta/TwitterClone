@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, DetailView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import TC_tweet
 
@@ -12,6 +12,15 @@ class TC_tweetListView(LoginRequiredMixin, ListView):
     context_object_name = "tweets"
     ordering = ["-date_posted"]
     paginate_by: 20
+
+class TC_tweetDetailView(LoginRequiredMixin, DetailView):
+    template_name = 'tweet/detail.html'
+    model = TC_tweet
+
+class TC_tweetDeleteView(LoginRequiredMixin, DeleteView):
+    template_name = 'tweet/delete.html'
+    model = TC_tweet
+    success_url = "/tweet"
 
 class TC_tweetCreateView(LoginRequiredMixin, CreateView):
     model = TC_tweet

@@ -3,5 +3,5 @@
 
 {% block content %}
     <h1>ホーム画面です</h1>
-    <a href="{% url 'user:logout' %}">ログアウトはこちら</a>
+    <a href="profile/{{ profile_id }}">あなたのプロフィールはこちら</a>
 {% endblock content %}

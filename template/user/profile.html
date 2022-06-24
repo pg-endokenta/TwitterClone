@@ -1,0 +1,11 @@
+{% extends 'twitter/base.html' %}
+    
+{% block content %}
+    <h1>ここはプロフィールページです</h1>
+    <h2>【ユーザー名】</h2>
+    <p>{{profile.user}}</p>
+    <h2>【自己紹介】</h2>
+    <p>{{profile.SelfIntroduction}}</p>
+    <a href="{% url 'user:profile_update' profile.id %}">あなた自身のプロフィールを編集するにはこちら</a>
+{% endblock content %}
+

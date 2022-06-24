@@ -5,6 +5,8 @@
 
  【自分のギット】https://github.com/pg-endokenta
 
+【ログイン画面テンプレート】https://github.com/LoginRadius/awesome-login-pages/blob/main/login-form-10/login-form-10/screenshot.png
+
   参考になるサイト
   https://office54.net/python/django/model-custom-user
 
